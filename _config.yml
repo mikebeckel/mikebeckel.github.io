@@ -7,9 +7,9 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Site Title"
+title                    : "Enterprise Client"
 title_separator          : "-"
-name                     : "Your Name"
+name                     : "Mike Beckel"
 description              : "An amazing website."
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
@@ -35,7 +35,7 @@ yandex_site_verification :
 
 # Social Sharing
 twitter:
-  username               :
+  username               : mikebeckel
 facebook:
   username               :
   app_id                 :
@@ -61,11 +61,11 @@ google_ad_slot           :
 
 # Site Author
 author:
-  name             : "Your Name"
+  name             : "Mike Beckel"
   avatar           : "bio-photo.jpg"
-  bio              : "I am an amazing person."
-  location         : "Somewhere"
-  email            :
+  bio              : "Lead Engineer at Target focusing on delivering and managing Windows with SCCM, OSD, MDT, GPO & PowerShell."
+  location         : "Minneapolis, MN"
+  email            : "hi@mikebeckel.com"
   uri              :
   bitbucket        :
   codepen          :
@@ -73,7 +73,7 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           :
+  github           : mikebeckel
   google_plus      :
   keybase          :
   instagram        :
@@ -84,7 +84,7 @@ author:
   stackoverflow    : # http://stackoverflow.com/users/123456/username
   steam            :
   tumblr           :
-  twitter          :
+  twitter          : mikebeckel
   vine             :
   weibo            :
   xing             :
