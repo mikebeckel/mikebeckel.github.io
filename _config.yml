@@ -11,7 +11,7 @@ title                    : "Enterprise Client"
 title_separator          : "-"
 name                     : "Mike Beckel"
 description              : "An amazing website."
-url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+url                      : "http://mikebeckel.com" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 gh_repo                  :
 teaser                   : # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
@@ -27,6 +27,18 @@ comments:
     num_posts            : # 5 (default)
     colorscheme          : # "light" (default), "dark"
 
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: true
+      share: true
+      related: true
 # SEO Related
 google_site_verification :
 bing_site_verification   :
@@ -66,29 +78,29 @@ author:
   bio              : "Lead Engineer at Target focusing on delivering and managing Windows with SCCM, OSD, MDT, GPO & PowerShell."
   location         : "Minneapolis, MN"
   email            : "hi@mikebeckel.com"
-  uri              :
-  bitbucket        :
-  codepen          :
-  dribbble         :
-  flickr           :
-  facebook         :
-  foursquare       :
+  # uri              :
+  # bitbucket        :
+  # codepen          :
+  # dribbble         :
+  # flickr           :
+  # facebook         :
+  # foursquare       :
   github           : mikebeckel
-  google_plus      :
-  keybase          :
-  instagram        :
-  lastfm           :
+  # google_plus      :
+  # keybase          :
+  # instagram        :
+  # lastfm           :
   linkedin         :
-  pinterest        :
-  soundcloud       :
+  # pinterest        :
+  # soundcloud       :
   stackoverflow    : # http://stackoverflow.com/users/123456/username
-  steam            :
-  tumblr           :
+  # steam            :
+  # tumblr           :
   twitter          : mikebeckel
-  vine             :
-  weibo            :
-  xing             :
-  youtube          :
+  # vine             :
+  # weibo            :
+  # xing             :
+  # youtube          :
 
 
 # Reading Files
@@ -148,9 +160,9 @@ kramdown:
 
 # Outputting
 permalink: /:categories/:title/
-paginate: 5 # amount of posts to show
+paginate: 10 # amount of posts to show
 paginate_path: /page:num/
-timezone: # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: America/Chicago # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 
 # Plugins
@@ -205,16 +217,3 @@ compress_html:
   clippings: all
   ignore:
     envs: development
-
-defaults:
-  # _posts
-  - scope:
-      path: ""
-      type: posts
-    values:
-      layout: single
-      author_profile: true
-      read_time: true
-      comments: true
-      share: true
-      related: true
