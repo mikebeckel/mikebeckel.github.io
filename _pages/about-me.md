@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: default
 title: About Mike
 author_profile: true
 ---
