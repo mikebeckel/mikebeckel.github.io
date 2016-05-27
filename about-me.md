@@ -1,6 +1,6 @@
 ---
 layout: single
-title: About Derek
+title: About Mike
 author_profile: true
 ---
 
