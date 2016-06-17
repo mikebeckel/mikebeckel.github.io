@@ -57,7 +57,7 @@ Here's an example of the entry which is created in Programs and Features. I chos
 ![Programs&FeaturesExample]({{ base_path }}/images/Ring.png)
 
 Here's a sample of the WQL that can be used to create the different collections. 
-```WQL
+```SQL
 select SMS_R_SYSTEM.ResourceID,SMS_R_SYSTEM.ResourceType,SMS_R_SYSTEM.Name,SMS_R_SYSTEM.SMSUniqueIdentifier,SMS_R_SYSTEM.ResourceDomainORWorkgroup,SMS_R_SYSTEM.Client from SMS_R_System inner join SMS_G_System_ADD_REMOVE_PROGRAMS_64 on SMS_G_System_ADD_REMOVE_PROGRAMS_64.ResourceId = SMS_R_System.ResourceId inner join SMS_G_System_OPERATING_SYSTEM on SMS_G_System_OPERATING_SYSTEM.ResourceId = SMS_R_System.ResourceId where SMS_G_System_ADD_REMOVE_PROGRAMS_64.DisplayName = "Windows 10 Upgrade Ring" and SMS_G_System_ADD_REMOVE_PROGRAMS_64.Version = "4" and SMS_G_System_OPERATING_SYSTEM.Caption like "Microsoft Windows 10%"
 ```
 
