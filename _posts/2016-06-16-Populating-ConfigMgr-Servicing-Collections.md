@@ -29,6 +29,7 @@ For this post I'm going to focus on the automatic ring assignment and will detai
 I've decided to group my assets into 10 Current Branch For Business rings, however you can easily adjust this number based on your requirements. In order to distribute the assets across the 10 rings I converted the hostname into an integer then using the modulus operator then assign the device into a group based on the result. Based on my testing the exact method used to convert the hostname to an integer doesn't matter as long as you consistently apply it to all the devices in scope. The rings will not not be perfectly equal, however they are within a close enough range that I found acceptable. 
 
 Here's the code that I used to auto assign a device to a ring then create a Add Remote Program Entry
+
 ```PowerShell
 $numberOfRings = 10
 [int]$iComputerName
@@ -57,6 +58,7 @@ Here's an example of the entry which is created in Programs and Features. I chos
 ![Programs&FeaturesExample]({{ base_path }}/images/Ring.png)
 
 Here's a sample of the WQL that can be used to create the different collections. 
+
 ```SQL
 select SMS_R_SYSTEM.ResourceID,SMS_R_SYSTEM.ResourceType,SMS_R_SYSTEM.Name,SMS_R_SYSTEM.SMSUniqueIdentifier,SMS_R_SYSTEM.ResourceDomainORWorkgroup,SMS_R_SYSTEM.Client from SMS_R_System inner join SMS_G_System_ADD_REMOVE_PROGRAMS_64 on SMS_G_System_ADD_REMOVE_PROGRAMS_64.ResourceId = SMS_R_System.ResourceId inner join SMS_G_System_OPERATING_SYSTEM on SMS_G_System_OPERATING_SYSTEM.ResourceId = SMS_R_System.ResourceId where SMS_G_System_ADD_REMOVE_PROGRAMS_64.DisplayName = "Windows 10 Upgrade Ring" and SMS_G_System_ADD_REMOVE_PROGRAMS_64.Version = "4" and SMS_G_System_OPERATING_SYSTEM.Caption like "Microsoft Windows 10%"
 ```
