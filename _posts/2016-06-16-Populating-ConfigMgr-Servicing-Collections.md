@@ -55,7 +55,7 @@ New-ItemProperty -Path $RegPath -Name 'NoRemove' -Value 00000001 -PropertyType D
 New-ItemProperty -Path $RegPath -Name 'HelpLink' -Value 'http://wiki.company.com/wiki/index.php/WaaS' -PropertyType String
 ```
 Here's an example of the entry which is created in Programs and Features. I chose to place it here as it's out-of-the-way, but still accessible. 
-![Programs&FeaturesExample]({{ base_path }}/images/Ring.png)
+![Programs&FeaturesExample](/images/Ring.png)
 
 Here's a sample of the WQL that can be used to create the different collections. 
 
