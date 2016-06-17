@@ -8,8 +8,6 @@ tags:
  - Servicing
 ---
 
-#Populating ConfigMgr Servicing Collections
-
 One of the main challenges that I see with servicing Windows 10 in any organization is determining when devices will receive the update. While evaluating different approaches I used the following criteria to choose the best solution for me:
 
 * Minimal collection administration 
