@@ -18,14 +18,14 @@ One of the main challenges that I see with servicing Windows 10 in any organizat
 
 The solution that I kept coming back to fits the *"Automate the mundane so we can focus on the complex"* mantra. 
 
-#### Approach
+### Approach
 During the workstation build a step will create an dummy program which will show up in Programs and Features. This program will inventoried by SCCM alongside all the other programs which saves us from extending hardware inventory further. The entry specifies what CBB ring a device is assigned to in the version attribute. From there query based collections will be created based on the on the inventoried data. If needed this process can also re-executed on devices if you decide to change the number of rings or want to reset the environment. This approach will take care of 95+% of the devices in my environment, however depending on how many users opt-in to Current Branch we may manually define a pilot device collection. 
 
 In addition to the automatic ring assignment we will deploy an application to the Application Catalog which will allow users to opt-in to Current Branch or change their Current Branch For Business ring. We don't expect that most users taking advantage of this, however we hope that there's enough interest that we only need to source a handful of users to be part of our pilot group.
 
 For this post I'm going to focus on the automatic ring assignment and will detail out the Current Branch opt-in and ring override method later. 
 
-#### Implementation
+### Implementation
 I've decided to group my assets into 10 Current Branch For Business rings, however you can easily adjust this number based on your requirements. In order to distribute the assets across the 10 rings I converted the hostname into an integer then using the modulus operator then assign the device into a group based on the result. Based on my testing the exact method used to convert the hostname to an integer doesn't matter as long as you consistently apply it to all the devices in scope. The rings will not not be perfectly equal, however they are within a close enough range that I found acceptable. 
 
 Here's the code that I used to auto assign a device to a ring then create a Add Remote Program Entry
@@ -69,8 +69,8 @@ SMS_G_System_OPERATING_SYSTEM.ResourceId = SMS_R_System.ResourceId where SMS_G_S
 
 Kaido Järvemets has an excellent [blog](http://blog.coretech.dk/kaj/creating-configmgr-servicing-plans-with-powershell/ "Kaido's Blog: Creating ConfigMgr Servicing Plans with PowerShell") post where he shows how to use the new New-CMWindowsServicingPlan cmdlet to implement a servicing plan within Configuration Manager 1511 or newer. His post can be easily updated to apply the WQL queries to the collections.
 
-#### Author's Note
-This is my first of what I hope to be many blog posts. I hope that you've enjoyed reading it and it inspires you to  develop a process to populate your own Servicing Collections. If you liked what you read please help spread the word by sharing the post. 
+### Author's Note
+This is my first of what I hope to be many blog posts. I hope that you've enjoyed reading it and it inspires you to develop a process to populate your own Servicing Collections. If you liked what you read please help spread the word by sharing the post. 
 
 For a long time I've read the numerous blogs posts on OSD, SCCM and Windows. I've been helped and inspired by so many of them and it's been long overdue (in my opinion) to start giving back to the community that I've benefited greatly from.
 
