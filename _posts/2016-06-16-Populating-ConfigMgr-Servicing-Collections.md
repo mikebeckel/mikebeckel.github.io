@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Populating-ConfigMgr-Servicing-Collections"
+title: "Populating ConfigMgr Servicing Collections"
 tags: 
  - ConfigMgr
  - Windows 10
