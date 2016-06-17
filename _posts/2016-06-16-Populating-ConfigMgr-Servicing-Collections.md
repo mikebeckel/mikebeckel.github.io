@@ -30,7 +30,7 @@ I've decided to group my assets into 10 Current Branch For Business rings, howev
 
 Here's the code that I used to auto assign a device to a ring then create a Add Remote Program Entry
 
-```PowerShell
+```powershell
 $numberOfRings = 10
 [int]$iComputerName
 $ComputerName = (Get-CimInstance Win32_ComputerSystem).Name
