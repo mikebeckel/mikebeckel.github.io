@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Migrate From Windows 7 BIOS to Windows 10 to UEFI In A Single Task Sequence"
+title: "Migrate From Windows 7 BIOS to Windows 10 UEFI In A Single Task Sequence"
 tags: 
  - Windows 10
  - Migration
@@ -8,7 +8,7 @@ tags:
  - UEFI
 ---
 
-While attending the Midwest Management Summit this year I kept hearing "How do I convert from BIOS to UEFI when migrating to Windows 10?". There are several approaches to address this challenge and each of them have their merits. There's no one right way to solve this; pick the solution that best fits your organization. This post is an introduction to how my team addressed this issue. 
+While attending the Midwest Management Summit (btw this is a great event that you should consider attending) this year I kept hearing "How do I convert from BIOS to UEFI when migrating to Windows 10?". There are several approaches to address this challenge and each of them have their merits. There's no one right way to solve this; pick the solution that best fits your organization. This post is an introduction to how my team addressed this issue. 
 
 TL:DR: [Target/SCCMOSD-Refresh-Multitool](https://github.com/target/sccmosd-refresh-multitool)
 
