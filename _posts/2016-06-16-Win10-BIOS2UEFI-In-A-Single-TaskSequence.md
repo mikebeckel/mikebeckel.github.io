@@ -15,6 +15,7 @@ TL:DR: [Target/SCCMOSD-Refresh-Multitool](https://github.com/target/sccmosd-refr
 In order to upgrade to our systems to Windows 10 with UEFI/SecureBoot we needed to develop a solution that would migrate our desktops with zero user or technician involvement. In addition it needed to work with devices encrypted with a 3rd party fully disk encryption solution, have no dependency on PXE, and support Dell hardware. Secondarily we had a goal to execute this process in a single SCCM OSD Task Sequence as we felt that this minimized the number of failure points.
 
 The solution we developed is based on a similar solution that I developed when migrating from Windows XP to Windows 7 and is composed of three phases:
+
 * ***Phase 1*** is executed inside the full OS (Windows 7) right after USMT captures the user state to a network share. The goal of this phase is to stage WinPE on the local disk and persist the TSEnv.dat file which is used by the task sequence. 
 * ***Phase 2*** is executed from within the WinPE Ramdisk. The goal of this phase is to wipe the disk and reformat with GPT disks, convert the BIOS to UEFI, stage WinPE back on the local disk and with the files necessary to continue the build. 
  * We chose to make this step self-sufficient and not reach out to network shares or web servers for content. While it can be updated to reach out for content we did not feel that the benefit outweighed the risk to an already complex process.  
