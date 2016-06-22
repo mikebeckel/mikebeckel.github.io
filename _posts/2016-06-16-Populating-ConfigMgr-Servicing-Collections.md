@@ -21,7 +21,7 @@ The solution that I kept coming back to fits the *"Automate the mundane so we ca
 ### Approach
 During the workstation build a step will create an dummy program which will show up in Programs and Features. This program will inventoried by SCCM alongside all the other programs which saves us from extending hardware inventory further. The entry specifies what CBB ring a device is assigned to in the version attribute. From there query based collections will be created based on the on the inventoried data. If needed this process can also re-executed on devices if you decide to change the number of rings or want to reset the environment. This approach will take care of 95+% of the devices in my environment, however depending on how many users opt-in to Current Branch we may manually define a pilot device collection. 
 
-In addition to the automatic ring assignment we will deploy an application to the Application Catalog which will allow users to opt-in to Current Branch or change their Current Branch For Business ring. We don't expect that most users taking advantage of this, however we hope that there's enough interest that we only need to source a handful of users to be part of our pilot group.
+In addition to the automatic ring assignment we will deploy an application to the Application Catalog which will allow users to opt-in to Current Branch or change their Current Branch For Business ring. We don't expect that most users will take advantage of this, however we hope that there's enough interest that we only need to source a handful of users to be part of our pilot group.
 
 For this post I'm going to focus on the automatic ring assignment and will detail out the Current Branch opt-in and ring override method later. 
 
