@@ -10,7 +10,7 @@ tags:
 
 While attending the Midwest Management Summit this year I kept hearing "How do I convert from BIOS to UEFI when migrating to Windows 10?". There are several approaches to address this challenge and each of them have their merits. There's no one right way to solve this; pick the solution that best fits your organization. This post is an introduction to how my team addressed this issue. 
 
-TL:DR: (https://github.com/target/sccmosd-refresh-multitool)
+TL:DR: https://github.com/target/sccmosd-refresh-multitool
 
 In order to upgrade to our systems to Windows 10 with UEFI/SecureBoot we needed to develop a solution that would migrate our desktops with zero user or technician involvement. In addition it needed to work with devices encrypted with a 3rd party fully disk encryption solution, have no dependency on PXE, and support Dell hardware. Secondarily we had a goal to execute this process in a single SCCM OSD Task Sequence as we felt that this minimized the number of failure points.
 
