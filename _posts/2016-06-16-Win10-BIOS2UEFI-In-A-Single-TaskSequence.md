@@ -24,6 +24,7 @@ The solution we developed is based on a similar solution that I developed when m
 The repo on GitHub details out each step so if you're interested in more detail continue reading [here](https://github.com/target/sccmosd-refresh-multitool)
 
 We have a few enhancments planned for the near future
+
 * Add support for Windows 7 UEFI to Windows 10 UEFI
 * Prevent users from closing out the scripts while executing in phase 2
 * Add support for HP hardware
